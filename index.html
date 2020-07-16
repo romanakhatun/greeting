@@ -1,25 +1,41 @@
 <!DOCTYPE html>
 <html>
-<body>
+  <head>
+    <link rel="stylesheet" href="style.css" />
+    <title>Greeting Friend!</title>
+  </head>
 
-  <button onclick="myFunction()">Greeting</button>
+  <body>
+    <div>
+      <div>
+        <nav>
+          <ul>
+            <li onclick="myFunction()">
+              Greeting Friend
+              <span></span><span></span><span></span><span></span>
+            </li>
+          </ul>
+        </nav>
+      </div>
 
-<p id="demo"></p>
+      <img id="img" src="" />
+    </div>
 
-<script>
-function myFunction() {
-  var greeting;
-  var time = new Date().getHours();
-  if (time < 10) {
-    greeting = "Good morning";
-  } else if (time < 20) {
-    greeting = "Good day";
-  } else {
-    greeting = "Good night";
-  }
-  document.getElementById("demo").innerHTML = greeting;
-}
-</script>
-
-</body>
+    <script>
+      function myFunction() {
+        var greeting;
+        var time = new Date().getHours();
+        if (time < 10) {
+          document.getElementById("img").src =
+            "https://media.tenor.com/images/113f8c6e36fad6d1c2843a4dfde7c52c/tenor.gif";
+        } else if (time < 20) {
+          document.getElementById("img").src =
+            "https://i.pinimg.com/originals/d5/18/74/d51874d255ca14c3473a12d0a172446f.gif";
+        } else {
+          document.getElementById("img").src =
+            "https://cdn.lowgif.com/small/ff29c046dbd3ce39-12-awesome-good-night-images-for-friends.gif";
+        }
+      }
+    </script>
+  </body>
 </html>
